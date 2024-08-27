@@ -14,7 +14,7 @@ class SSOController extends Controller
 {
     public function getLogin(Request $request)
     {
-        $request->session()->put("state", $state =  Str::random(40));
+        $request->session()->put("state", $state = "qwertyuioplkjhgfdsazxcvbnm");
         $query = http_build_query([
             "client_id" => config("auth.client_id"),
             "redirect_uri" => config("auth.callback") ,
